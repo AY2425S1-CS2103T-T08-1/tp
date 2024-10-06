@@ -10,8 +10,7 @@
         "nicholas-chong-yao-xuan": "Nicholas Chong Yao Xuan",
         "alexander-liswandy": "Alexander Liswandy",
         "travis-sim": "Travis Sim",
-        "chong-tze-zhao": "CHong Tze Zhao",
-        "jean-doe": "Jean Doe",
+        "chong-tze-zhao": "Chong Tze Zhao",
         "zhang-yuxiang": "Zhang Yuxiang"
       },
       "headingKeywords": {}
@@ -108,7 +107,7 @@
       "src": "UserGuide.md",
       "title": "User Guide",
       "headings": {
-        "ab-3-user-guide": "AB-3 User Guide",
+        "dltbook-user-guide": "DLTbook User Guide",
         "quick-start": "Quick start",
         "features": "Features",
         "viewing-help-help": "Viewing help : help",
@@ -119,9 +118,12 @@
         "deleting-a-person-delete": "Deleting a person : delete",
         "clearing-all-entries-clear": "Clearing all entries : clear",
         "exiting-the-program-exit": "Exiting the program : exit",
+        "adding-a-public-address-to-a-contact-addpublicaddress": "Adding a public address to a contact : addPublicAddress",
+        "retrieving-a-public-address-of-a-contact-retrievepublicaddress": "Retrieving a public address of a contact : retrievePublicAddress",
+        "deleting-a-public-address-of-a-contact-deletepublicaddress": "Deleting a public address of a contact : deletePublicAddress",
+        "searching-for-a-public-address-publicaddresssearch": "Searching for a public address : publicAddressSearch",
         "saving-the-data": "Saving the data",
         "editing-the-data-file": "Editing the data file",
-        "archiving-data-files-coming-in-v2-0": "Archiving data files [coming in v2.0]",
         "faq": "FAQ",
         "known-issues": "Known issues",
         "command-summary": "Command summary"
