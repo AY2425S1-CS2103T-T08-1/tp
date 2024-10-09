@@ -1,7 +1,7 @@
 {
   "name": "docs",
   "version": "1.0.0",
-  "description": "DLTBook docs",
+  "description": "DLTbook docs",
   "scripts": {
     "init": "markbind init",
     "build": "markbind build",
