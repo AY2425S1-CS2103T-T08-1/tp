@@ -80,6 +80,7 @@ public class JsonUtil {
     /**
      * Saves the Json object to the specified file.
      * Overwrites existing file if it exists, creates a new file if it doesn't.
+     *
      * @param jsonFile cannot be null
      * @param filePath cannot be null
      * @throws IOException if there was an error during writing to the file
@@ -94,6 +95,7 @@ public class JsonUtil {
 
     /**
      * Converts a given string representation of a JSON data to instance of a class
+     *
      * @param <T> The generic type to create an instance of
      * @return The instance of T with the specified values in the JSON string
      */
@@ -103,8 +105,9 @@ public class JsonUtil {
 
     /**
      * Converts a given instance of a class into its JSON data string representation
+     *
      * @param instance The T object to be converted into the JSON string
-     * @param <T> The generic type to create an instance of
+     * @param <T>      The generic type to create an instance of
      * @return JSON data representation of the given class instance, in string
      */
     public static <T> String toJsonString(T instance) throws JsonProcessingException {
@@ -129,7 +132,6 @@ public class JsonUtil {
          * Gets the logging level that matches loggingLevelString
          * <p>
          * Returns null if there are no matches
-         *
          */
         private Level getLoggingLevel(String loggingLevelString) {
             return Level.parse(loggingLevelString);
