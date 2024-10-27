@@ -1,0 +1,18 @@
+@startuml
+skin rose
+skinparam ActivityFontSize 15
+skinparam ArrowFontSize 12
+start
+:User enters delete public address command;
+
+if () then ([index is valid && network is valid])
+    if() then ([wallet label was indicated])
+    :Delete public address with label;
+    else ([else])
+    :Delete all public addresses with network;
+    endif
+else ([else])
+    :Display error message;
+endif
+stop
+@enduml
