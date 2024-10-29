@@ -1,0 +1,30 @@
+@startuml
+hide circle
+skinparam classAttributeIconSize 0
+
+Class "{abstract}\nCommand" as Command {
+  +execute(Model): CommandResult
+}
+Class SearchPublicAddressCommand {
+ - publicAddressString: String
+    + COMMAND_WORD: String
+    + MESSAGE_USAGE: String
+    + MESSAGE_SEARCH_PUBLIC_ADDRESS_SUCCESS_FOUND: String
+    + MESSAGE_SEARCH_PUBLIC_ADDRESS_SUCCESS_NOT_FOUND: String
+    + MESSAGE_SEARCH_PUBLIC_ADDRESS_SUBSTRING_SUCCESS: String
+    + MESSAGE_SEARCH_PUBLIC_ADDRESS_SUBSTRING_FAIL: String
+    + MESSAGE_SEARCH_PUBLIC_ADDRESS_FAILURE_INVALID_CHAR: String
+    + MESSAGE_SEARCH_PUBLIC_ADDRESS_FAILURE_TOO_LONG: String
+    + MESSAGE_ARGUMENTS: String
+    + SearchPublicAddressCommand(publicAddressString: String)
+    + execute(model: Model): CommandResult
+    - generateSuccessMessage(personsWithPublicAddressMatch: List<Person>): String
+    - generateStringForPublicAddressesForPersonMap(person: Person, publicAddressString: String): String
+    + equals(other: Object): boolean
+}
+Class CommandException
+
+SearchPublicAddressCommand -up-|> Command
+Command ..> CommandException: throws >
+SearchPublicAddressCommand .right.> CommandException: throws >
+@enduml

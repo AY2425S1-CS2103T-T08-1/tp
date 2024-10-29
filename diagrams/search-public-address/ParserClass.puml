@@ -1,0 +1,14 @@
+@startuml
+hide circle
+skinparam classAttributeIconSize 0
+
+Class "<<interface>>\nParser" as Parser
+Class SearchPublicAddressCommandParser {
+  +parse(): SearchPublicAddressCommand
+}
+Class ParserException
+
+SearchPublicAddressCommandParser .up.|> Parser
+Parser .right.> ParserException: throws >
+SearchPublicAddressCommandParser .right.> ParserException: throws >
+@enduml

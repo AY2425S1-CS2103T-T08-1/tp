@@ -19,7 +19,11 @@ Class Email
 Class Name
 Class Phone
 Class Tag
+Class PublicAddressComposition
+Class Network
 Class PublicAddress
+
+
 
 Class I #FFFFFF
 }
@@ -42,8 +46,12 @@ Person *--> Name
 Person *--> Phone
 Person *--> Email
 Person *--> Address
+Person *--> PublicAddressComposition
 Person *--> "*" Tag
 Person *--> "*" PublicAddress
+
+PublicAddressComposition *--> "*" Network
+PublicAddressComposition *--> "*" PublicAddress
 
 Person -[hidden]up--> I
 UniquePersonList -[hidden]right-> I
@@ -53,4 +61,8 @@ Phone -[hidden]right-> Address
 Address -[hidden]right-> Email
 
 ModelManager --> "~* filtered" Person
+
+
+
+
 @enduml
