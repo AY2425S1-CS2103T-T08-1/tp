@@ -17,6 +17,8 @@ _site/
 .env
 .env.local
 
+.bin
+
 # IDE configs
 .vscode/
 .idea/*
