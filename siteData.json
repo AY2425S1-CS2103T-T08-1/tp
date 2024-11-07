@@ -125,6 +125,7 @@
         "retrieving-public-addresses-of-a-contact-retrievepa": "Retrieving public addresses of a contact : retrievepa",
         "deleting-a-public-address-of-a-contact-deletepa": "Deleting a public address of a contact : deletepa",
         "searching-for-a-public-address-publicaddresssearch": "Searching for a public address : publicAddressSearch",
+        "filtering-persons-by-public-addresses-network-filter": "Filtering persons by public addresses network : filter",
         "clearing-all-entries-clear": "Clearing all entries : clear",
         "exiting-the-program-exit": "Exiting the program : exit",
         "saving-the-data": "Saving the data",
