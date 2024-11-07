@@ -10,10 +10,8 @@ abstract AbstractEditCommand {
 }
 class EditCommand
 class AddPublicAddressCommand
-class DeletePublicAddressCommand
 Command <|-- AbstractEditCommand
 AbstractEditCommand <|- EditCommand
 AddPublicAddressCommand -|> AbstractEditCommand
-AbstractEditCommand <|-- DeletePublicAddressCommand
 
 @enduml
