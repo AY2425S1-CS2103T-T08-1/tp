@@ -13,5 +13,7 @@ class AddPublicAddressCommand
 Command <|-- AbstractEditCommand
 AbstractEditCommand <|- EditCommand
 AddPublicAddressCommand -|> AbstractEditCommand
+abstract "abstract class"
+class "class"
 
 @enduml
