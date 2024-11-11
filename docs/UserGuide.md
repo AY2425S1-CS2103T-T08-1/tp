@@ -18,7 +18,7 @@ convenience and security.
 **DLTbook** offers a command-line first interface, allowing you to manage your contacts and their DLT
 addresses with ease.
 
-We’ll walk you through each feature, so you can discover with ease **DLTbook**'s offerings. Let’s get started with
+We’ll walk you through each feature, so you can discover with ease **DLTbook**'s offerings. Let’s get started with 
 **DLTbook** and manage your contact's public addresses with greater ease.
 
 ⚠️ **Security Note** : To protect your data from potential manipulation, we recommend using DLTbook on a device with no
@@ -81,14 +81,13 @@ internet connectivity.
 
     - [Frequently Asked Questions](#frequently-asked-questions)
 
-    - [Data Storage](#data-storage)
-
     - [Common Errors](#common-errors)
 
     - [Known Issues](#known-issues)
 
     - [Future Enhancements](#future-enhancements)
 
+    - [Data Storage](#data-storage)
 
 - [Feature Summary](#feature-summary)
 
@@ -188,11 +187,14 @@ Here’s how you can start using DLTbook:
 
 4. Once you're comfortable with the basics, explore the full range of [features](#features) available in DLTbook.
 
+
 <div style="text-align: left;">
   <a href="#table-of-contents" style="display: inline-block; padding: 2px 5px; font-size: 10px; color: white; background-color: #007bff; text-decoration: none; border-radius: 5px;">Return to Table of Contents</a>
 </div>
 
+
 ## Expert's Guide
+
 
 If you have used DLTbook before, jump straight to [Setup Guide](#setup-guide) for a quick overview on basic
 commands.
@@ -383,8 +385,8 @@ DLTbook supports the following commands:
 
 * If you are using a PDF version of this document, be careful when copying and pasting commands that span multiple lines
   as space characters surrounding line-breaks may be omitted when copied over to the application.
-  </box>
-  <br>
+</box>
+<br>
 
 <div style="text-align: left;">
   <a href="#table-of-contents" style="display: inline-block; padding: 2px 5px; font-size: 10px; color: white; background-color: #007bff; text-decoration: none; border-radius: 5px;">Return to Table of Contents</a>
@@ -939,7 +941,7 @@ the acceptable range). Therefore, edit the data file only if you are confident t
 5. **Public Address for length BTC/ETH/SOL should be more than 26 characters**<br>
    Ensure that the public address is provided and is valid. The length of BTC/ETH/SOL public addresses should be more
    than 26 characters, less than 44 characters and can only contain alphanumeric characters.
-
+   
  <div style="text-align: left;">
   <a href="#table-of-contents" style="display: inline-block; padding: 2px 5px; font-size: 10px; color: white; background-color: #007bff; text-decoration: none; border-radius: 5px;">Return to Table of Contents</a>
 </div>
