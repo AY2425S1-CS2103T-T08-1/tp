@@ -58,7 +58,14 @@
         "appendix-requirements": "Appendix: Requirements",
         "product-scope": "Product scope",
         "user-stories": "User stories",
-        "use-cases": "Use cases"
+        "use-cases": "Use cases",
+        "non-functional-requirements": "Non-Functional Requirements",
+        "glossary": "Glossary",
+        "appendix-planned-enhancements": "Appendix: Planned Enhancements",
+        "appendix-instructions-for-manual-testing-2": "Appendix: Instructions for manual testing",
+        "launch-and-shutdown": "Launch and shutdown",
+        "deleting-a-person": "Deleting a person",
+        "saving-data": "Saving data"
       },
       "headingKeywords": {}
     },
