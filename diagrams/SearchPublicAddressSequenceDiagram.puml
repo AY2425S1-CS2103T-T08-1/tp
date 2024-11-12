@@ -1,0 +1,81 @@
+@startuml
+!include style.puml
+skinparam ArrowFontStyle plain
+
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":AddressBookParser" as AddressBookParser LOGIC_COLOR
+participant ":SearchPublicAddressCommandParser" as SearchPublicAddressCommandParser LOGIC_COLOR
+participant "s:SearchPublicAddressCommand" as SearchPublicAddressCommand LOGIC_COLOR
+end box
+
+box Model MODEL_COLOR_T1
+participant "m:Model" as Model MODEL_COLOR
+participant "p:Person" as Person MODEL_COLOR
+participant "pa:PublicAddressComposition" as PublicAddressComposition MODEL_COLOR
+end box
+
+[-> LogicManager : execute("searchpa\npa/bc1q5y5960gr9vnjlmwfst232z07surun7rey5svu9")
+activate LogicManager
+
+LogicManager -> AddressBookParser : parseCommand("searchpa\npa/bc1q5y5960gr9vnjlmwfst232z07surun7rey5svu9")
+activate AddressBookParser
+
+create SearchPublicAddressCommandParser
+AddressBookParser -> SearchPublicAddressCommandParser
+activate SearchPublicAddressCommandParser
+
+SearchPublicAddressCommandParser --> AddressBookParser
+deactivate SearchPublicAddressCommandParser
+
+AddressBookParser -> SearchPublicAddressCommandParser : parse(\n"pa/bc1q5y5960gr9vnjlmwfst232z07surun7rey5svu9")
+activate SearchPublicAddressCommandParser
+
+create SearchPublicAddressCommand
+SearchPublicAddressCommandParser -> SearchPublicAddressCommand
+activate SearchPublicAddressCommand
+
+SearchPublicAddressCommand --> SearchPublicAddressCommandParser :
+deactivate SearchPublicAddressCommand
+'Hidden arrow to position the destroy marker below the end of the activation bar.
+SearchPublicAddressCommandParser -[hidden]-> AddressBookParser
+destroy SearchPublicAddressCommandParser
+
+AddressBookParser --> LogicManager : s
+deactivate AddressBookParser
+
+LogicManager -> SearchPublicAddressCommand : execute(m)
+activate SearchPublicAddressCommand
+
+SearchPublicAddressCommand -> PublicAddressComposition : validatePublicAddress(\n"pa/bc1q5y5960gr9vnjlmwfst232z07surun7rey5svu9")
+activate PublicAddressComposition
+
+PublicAddressComposition --> SearchPublicAddressCommand
+deactivate PublicAddressComposition
+
+SearchPublicAddressCommand -> Model : getFilteredPersonList()
+activate Model
+
+Model --> SearchPublicAddressCommand : personList
+deactivate Model
+
+SearchPublicAddressCommand -> Person : hasPublicAddressStringAmongAllNetworks(\n"pa/bc1q5y5960gr9vnjlmwfst232z07surun7rey5svu9")
+activate Person
+
+Person -> PublicAddressComposition : hasPublicAddress(\n"pa/bc1q5y5960gr9vnjlmwfst232z07surun7rey5svu9")
+activate PublicAddressComposition
+
+PublicAddressComposition --> Person
+deactivate PublicAddressComposition
+
+Person --> SearchPublicAddressCommand
+deactivate Person
+
+SearchPublicAddressCommand -> SearchPublicAddressCommand : generateResult(personsWithPublicAddressMatch)
+
+SearchPublicAddressCommand --> LogicManager : r
+deactivate SearchPublicAddressCommand
+
+[<--LogicManager
+deactivate LogicManager
+@enduml
