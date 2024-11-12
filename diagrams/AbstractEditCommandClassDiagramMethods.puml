@@ -1,0 +1,13 @@
+@startuml
+'https://plantuml.com/class-diagram
+abstract AbstractEditCommand {
+    - index
+    - editPersonDescriptor
+    - {static} createEditedPerson(Person personToEdit, EditPersonDescriptor editPersonDescriptor)
+    + execute(Model model)
+    + execute(Model model, BiFunction<? super Person, ? super EditPersonDescriptor, ? extends Person> makeEditedPerson,
+              String successMessage)
+    - getPersonToEdit(Model model)
+    - saveEditedPerson(Model model, Person personToEdit, Person editedPerson, String successMessage)
+}
+@enduml
