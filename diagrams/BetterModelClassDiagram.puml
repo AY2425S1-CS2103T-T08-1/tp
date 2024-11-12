@@ -22,5 +22,4 @@ Person *--> PublicAddressComposition
 
 PublicAddressComposition *--> "*" Network
 PublicAddressComposition *--> "*" PublicAddress
-
 @enduml
